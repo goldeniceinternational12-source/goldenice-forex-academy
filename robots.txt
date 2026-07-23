@@ -2,4 +2,4 @@ User-agent: *
 
 Allow: /
 
-Sitemap: https://YOUR-VERCEL-URL.vercel.app/sitemap.xml
+Sitemap: https://goldenice-forex-academy.vercel.app/
