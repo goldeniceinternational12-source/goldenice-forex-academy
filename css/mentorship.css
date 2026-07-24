@@ -1,7 +1,6 @@
 /* ===================================
    GOLDENICE INTERNATIONAL
    MENTORSHIP PAGE CSS
-   PART 1
 =================================== */
 
 
@@ -11,19 +10,17 @@
 
 :root{
 
-    --gold:#D4AF37;
-    --gold-light:#F7D774;
+--gold:#D4AF37;
+--gold-light:#F7D774;
 
-    --dark:#050B16;
-    --dark2:#0F172A;
+--dark:#050B16;
+--dark2:#0F172A;
+--dark3:#111827;
 
-    --white:#ffffff;
-
-    --gray:#CBD5E1;
+--white:#ffffff;
+--gray:#CBD5E1;
 
 }
-
-
 
 
 
@@ -33,9 +30,9 @@
 
 *{
 
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 
 }
 
@@ -43,7 +40,7 @@
 
 html{
 
-    scroll-behavior:smooth;
+scroll-behavior:smooth;
 
 }
 
@@ -51,13 +48,23 @@ html{
 
 body{
 
-    font-family:'Poppins',sans-serif;
+font-family:'Poppins',sans-serif;
 
-    background:var(--dark);
+background:var(--dark);
 
-    color:white;
+color:white;
 
-    overflow-x:hidden;
+overflow-x:hidden;
+
+}
+
+
+
+img{
+
+max-width:100%;
+
+display:block;
 
 }
 
@@ -65,11 +72,12 @@ body{
 
 a{
 
-    text-decoration:none;
+text-decoration:none;
 
-    color:inherit;
+color:inherit;
 
 }
+
 
 
 
@@ -82,109 +90,47 @@ a{
 
 .navbar{
 
+position:fixed;
 
-    position:fixed;
+top:0;
 
+left:0;
 
-    top:0;
+width:100%;
 
+padding:18px 8%;
 
-    left:0;
+display:flex;
 
+justify-content:space-between;
 
-    width:100%;
+align-items:center;
 
+background:rgba(5,11,22,.85);
 
+backdrop-filter:blur(15px);
 
-    padding:18px 8%;
-
-
-
-    display:flex;
-
-
-    justify-content:space-between;
-
-
-    align-items:center;
-
-
-
-    background:
-
-    rgba(5,11,22,.75);
-
-
-
-    backdrop-filter:blur(15px);
-
-
-
-    z-index:1000;
-
-
+z-index:1000;
 
 }
 
-
-
-
-
-.navbar.scrolled{
-
-
-    background:
-
-    rgba(5,11,22,.95);
-
-
-
-    box-shadow:
-
-    0 15px 40px rgba(0,0,0,.4);
-
-
-}
-
-
-
-
-
-/* LOGO */
 
 
 .logo img{
 
-
-    width:80px;
-
-
-    height:auto;
-
-
+width:80px;
 
 }
 
 
 
-
-
-
-
-/* NAV LINKS */
-
-
 .nav-links{
 
+display:flex;
 
-    display:flex;
+align-items:center;
 
-
-    gap:35px;
-
-
-    align-items:center;
-
+gap:30px;
 
 }
 
@@ -192,9 +138,7 @@ a{
 
 .nav-links li{
 
-
-    list-style:none;
-
+list-style:none;
 
 }
 
@@ -202,15 +146,9 @@ a{
 
 .nav-links a{
 
+color:white;
 
-    color:#E5E7EB;
-
-
-    font-weight:500;
-
-
-    transition:.3s ease;
-
+transition:.3s;
 
 }
 
@@ -219,52 +157,31 @@ a{
 .nav-links a:hover,
 .nav-links a.active{
 
-
-    color:var(--gold);
-
+color:var(--gold);
 
 }
 
 
-
-
-
-
-
-/* WHATSAPP NAV BUTTON */
 
 
 .btn-nav{
 
+padding:14px 30px;
 
-    padding:13px 30px;
+border-radius:50px;
 
+background:
 
-
-    border-radius:50px;
-
-
-
-    background:
-
-    linear-gradient(
-
-    135deg,
-
-    var(--gold),
-
-    var(--gold-light)
-
-    );
+linear-gradient(
+135deg,
+var(--gold),
+var(--gold-light)
+);
 
 
+color:#000;
 
-    color:#000;
-
-
-
-    font-weight:700;
-
+font-weight:700;
 
 }
 
@@ -272,14 +189,9 @@ a{
 
 
 
-/* MOBILE MENU */
-
-
 .menu-toggle{
 
-
-    display:none;
-
+display:none;
 
 }
 
@@ -287,24 +199,15 @@ a{
 
 .menu-toggle span{
 
+display:block;
 
-    display:block;
+width:30px;
 
+height:3px;
 
-    width:30px;
+background:var(--gold);
 
-
-    height:3px;
-
-
-    background:var(--gold);
-
-
-    margin:6px;
-
-
-    border-radius:10px;
-
+margin:6px;
 
 }
 
@@ -315,58 +218,38 @@ a{
 
 
 /* ==========================
-   HERO SECTION
+   HERO
 ========================== */
 
 
 .mentorship-hero{
 
+min-height:100vh;
 
-    min-height:100vh;
+display:flex;
 
+justify-content:center;
 
-    display:flex;
+align-items:center;
 
+text-align:center;
 
-    justify-content:center;
-
-
-    align-items:center;
-
-
-
-    text-align:center;
+position:relative;
 
 
+background:
 
-    position:relative;
+linear-gradient(
+rgba(5,11,22,.75),
+rgba(5,11,22,.90)
+),
 
-
-
-    background:
-
-
-
-    linear-gradient(
-
-    rgba(5,11,22,.75),
-
-    rgba(5,11,22,.92)
-
-    ),
+url("../images/mentorship.jpg");
 
 
+background-size:cover;
 
-    url('../images/mentorship.jpg');
-
-
-
-    background-size:cover;
-
-
-
-    background-position:center;
-
+background-position:center;
 
 }
 
@@ -375,234 +258,442 @@ a{
 
 .hero-overlay{
 
+position:absolute;
 
-    position:absolute;
+inset:0;
 
+background:
 
-    inset:0;
-
-
-
-    background:
-
-    radial-gradient(
-
-    rgba(212,175,55,.18),
-
-    transparent 65%
-
-    );
-
+radial-gradient(
+rgba(212,175,55,.18),
+transparent 70%
+);
 
 }
 
 
 
 
+.hero-content{
 
-.mentorship-hero-content{
+position:relative;
 
+z-index:2;
 
-    position:relative;
+max-width:900px;
 
-
-    z-index:2;
-
-
-
-    max-width:950px;
-
-
-    padding:100px 20px 0;
-
+padding:100px 20px 0;
 
 }
-
-
 
 
 
 .hero-badge{
 
+display:inline-block;
 
-    display:inline-block;
+padding:12px 25px;
 
+border-radius:50px;
 
+color:var(--gold);
 
-    padding:12px 25px;
+background:rgba(212,175,55,.12);
 
+border:1px solid rgba(212,175,55,.35);
 
-
-    border-radius:50px;
-
-
-
-    color:var(--gold);
-
-
-
-    background:
-
-    rgba(212,175,55,.12);
-
-
-
-    border:
-
-    1px solid rgba(212,175,55,.35);
-
-
-
-    margin-bottom:25px;
-
+margin-bottom:25px;
 
 }
-
-
-
 
 
 
 .mentorship-hero h1{
 
+font-size:4rem;
 
-    font-size:4rem;
+line-height:1.2;
 
-
-
-    line-height:1.15;
-
-
-
-    font-weight:800;
-
-
-
-    margin-bottom:25px;
-
+margin-bottom:25px;
 
 }
-
-
-
 
 
 
 .mentorship-hero p{
 
+color:var(--gray);
 
-    color:var(--gray);
+font-size:1.15rem;
+
+line-height:1.8;
+
+max-width:800px;
+
+margin:auto;
+
+}
+
+/* ===================================
+   MENTORSHIP OVERVIEW
+=================================== */
+
+
+.mentorship-overview{
+
+padding:120px 8%;
+
+background:var(--dark2);
+
+}
 
 
 
-    font-size:1.2rem;
+
+.overview-grid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(auto-fit,minmax(260px,1fr));
+
+gap:30px;
+
+margin-top:70px;
+
+}
 
 
 
-    line-height:1.8;
+
+
+.overview-card{
+
+background:
+
+rgba(255,255,255,.05);
+
+
+border:
+
+1px solid rgba(255,255,255,.08);
+
+
+border-radius:25px;
+
+
+padding:40px 30px;
+
+
+text-align:center;
+
+
+transition:.4s ease;
+
+
+}
 
 
 
-    max-width:800px;
+
+
+.overview-card:hover{
+
+transform:translateY(-10px);
+
+
+border-color:var(--gold);
+
+
+box-shadow:
+
+0 20px 45px rgba(212,175,55,.18);
+
+
+}
 
 
 
-    margin:auto;
+
+.overview-card i{
+
+font-size:55px;
+
+color:var(--gold);
+
+margin-bottom:25px;
+
+}
+
+
+
+
+.overview-card h3{
+
+font-size:1.4rem;
+
+margin-bottom:15px;
+
+}
+
+
+
+
+.overview-card p{
+
+color:var(--gray);
+
+line-height:1.8;
+
+}
+
+
+
+
+
+
+
+
+/* ===================================
+   WHAT YOU WILL LEARN
+=================================== */
+
+
+.learning-section{
+
+padding:120px 8%;
+
+
+background:var(--dark);
+
+}
+
+
+
+
+
+.learning-grid{
+
+
+display:grid;
+
+
+grid-template-columns:
+
+repeat(auto-fit,minmax(260px,1fr));
+
+
+gap:30px;
+
+
+margin-top:70px;
+
+
+}
+
+
+
+
+
+
+.learning-card{
+
+
+background:
+
+rgba(255,255,255,.05);
+
+
+
+border:
+
+1px solid rgba(255,255,255,.08);
+
+
+
+border-radius:25px;
+
+
+
+padding:35px 30px;
+
+
+
+text-align:center;
+
+
+
+transition:.4s ease;
+
+
+}
+
+
+
+
+
+.learning-card:hover{
+
+
+transform:translateY(-10px);
+
+
+
+border-color:var(--gold);
+
+
+
+box-shadow:
+
+0 20px 45px rgba(212,175,55,.18);
+
+
+}
+
+
+
+
+
+.learning-icon{
+
+
+width:75px;
+
+
+height:75px;
+
+
+margin:0 auto 25px;
+
+
+
+display:flex;
+
+
+justify-content:center;
+
+
+align-items:center;
+
+
+
+border-radius:50%;
+
+
+
+background:
+
+rgba(212,175,55,.12);
+
+
+}
+
+
+
+
+
+.learning-icon i{
+
+
+font-size:35px;
+
+
+color:var(--gold);
+
+
+}
+
+
+
+
+
+.learning-card h3{
+
+
+font-size:1.4rem;
+
+
+margin-bottom:15px;
+
+
+}
+
+
+
+
+.learning-card p{
+
+
+color:var(--gray);
+
+
+line-height:1.8;
 
 
 }
 
 /* ===================================
-   MENTORSHIP CSS PART 2
+   MENTORSHIP PACKAGES
 =================================== */
 
 
-/* ==========================
-   HERO BUTTONS
-========================== */
+.packages-section{
 
+padding:120px 8%;
 
-.hero-buttons{
-
-    margin-top:40px;
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:20px;
-
-    flex-wrap:wrap;
+background:var(--dark3);
 
 }
 
 
 
-.hero-btn,
-.hero-btn-outline{
+
+.packages-grid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(auto-fit,minmax(280px,1fr));
 
 
-    padding:16px 40px;
+gap:35px;
 
 
-    border-radius:50px;
-
-
-    font-weight:700;
-
-
-    transition:.4s ease;
-
-
-}
-
-
-
-.hero-btn{
-
-
-    background:
-
-    linear-gradient(
-
-    135deg,
-
-    var(--gold),
-
-    var(--gold-light)
-
-    );
-
-
-    color:#000;
-
+margin-top:70px;
 
 }
 
 
 
-.hero-btn-outline{
 
 
-    border:
+.package-card{
 
-    2px solid var(--gold);
+background:
 
-
-    color:white;
-
-
-}
+rgba(255,255,255,.05);
 
 
+border:
 
-.hero-btn:hover,
-.hero-btn-outline:hover{
+1px solid rgba(255,255,255,.08);
 
 
-    transform:
+border-radius:30px;
 
-    translateY(-8px);
+
+padding:45px 35px;
+
+
+text-align:center;
+
+
+transition:.4s ease;
+
+
+position:relative;
 
 
 }
@@ -611,63 +702,17 @@ a{
 
 
 
-/* ==========================
-   INTRO SECTION
-========================== */
+.package-card:hover{
+
+transform:translateY(-12px);
 
 
-.mentorship-intro{
+border-color:var(--gold);
 
 
-    padding:120px 8%;
+box-shadow:
 
-
-    background:#0F172A;
-
-
-}
-
-
-
-.section-title{
-
-
-    text-align:center;
-
-
-    max-width:850px;
-
-
-    margin:auto;
-
-
-}
-
-
-
-.section-title h2{
-
-
-    font-size:3rem;
-
-
-    margin-bottom:20px;
-
-
-}
-
-
-
-.section-title p{
-
-
-    color:var(--gray);
-
-
-    line-height:1.8;
-
-
-    font-size:1.1rem;
+0 25px 50px rgba(212,175,55,.18);
 
 
 }
@@ -676,38 +721,15 @@ a{
 
 
 
-
-/* ==========================
-   TRAINING SECTION
-========================== */
+.package-card.featured{
 
 
-.training{
+border:
+
+2px solid var(--gold);
 
 
-    padding:120px 8%;
-
-
-    background:#050B16;
-
-
-}
-
-
-
-.training-grid{
-
-
-    display:grid;
-
-
-    grid-template-columns:
-
-
-    repeat(auto-fit,minmax(260px,1fr));
-
-
-    gap:30px;
+transform:scale(1.03);
 
 
 }
@@ -716,37 +738,13 @@ a{
 
 
 
-
-.training-card{
-
-
-    padding:40px 25px;
+.package-card.featured:hover{
 
 
+transform:
 
-    background:
-
-
-    rgba(255,255,255,.05);
-
-
-
-    border:
-
-
-    1px solid rgba(255,255,255,.08);
-
-
-
-    border-radius:30px;
-
-
-
-    text-align:center;
-
-
-
-    transition:.4s ease;
+scale(1.03)
+translateY(-12px);
 
 
 }
@@ -755,22 +753,86 @@ a{
 
 
 
-.training-card:hover{
+.package-header i{
 
 
-    transform:
-
-    translateY(-12px);
+font-size:55px;
 
 
-
-    border-color:var(--gold);
-
+color:var(--gold);
 
 
-    box-shadow:
+margin-bottom:20px;
 
-    0 20px 45px rgba(212,175,55,.18);
+
+}
+
+
+
+
+
+.package-header h3{
+
+
+font-size:1.6rem;
+
+
+margin-bottom:30px;
+
+
+}
+
+
+
+
+
+.package-card ul{
+
+
+list-style:none;
+
+
+margin-bottom:35px;
+
+
+}
+
+
+
+
+
+.package-card li{
+
+
+color:var(--gray);
+
+
+padding:12px 0;
+
+
+border-bottom:
+
+1px solid rgba(255,255,255,.08);
+
+
+}
+
+
+
+
+.package-card li::before{
+
+
+content:"✓";
+
+
+color:var(--gold);
+
+
+font-weight:bold;
+
+
+margin-right:10px;
 
 
 }
@@ -780,49 +842,20 @@ a{
 
 
 
-.training-card i{
 
 
-    font-size:3rem;
+/* ===================================
+   BENEFITS SECTION
+=================================== */
 
 
-
-    color:var(--gold);
-
+.benefits-section{
 
 
-    margin-bottom:25px;
+padding:120px 8%;
 
 
-}
-
-
-
-
-.training-card h3{
-
-
-    margin-bottom:15px;
-
-
-
-    font-size:1.5rem;
-
-
-}
-
-
-
-
-
-.training-card p{
-
-
-    color:var(--gray);
-
-
-
-    line-height:1.8;
+background:var(--dark2);
 
 
 }
@@ -832,41 +865,22 @@ a{
 
 
 
-/* ==========================
-   MENTORSHIP PROCESS
-========================== */
+.benefits-grid{
 
 
-.process{
+display:grid;
 
 
-    padding:120px 8%;
+grid-template-columns:
 
 
-    background:#111827;
+repeat(auto-fit,minmax(260px,1fr));
 
 
-}
+gap:30px;
 
 
-
-
-
-.process-container{
-
-
-    display:grid;
-
-
-
-    grid-template-columns:
-
-
-    repeat(auto-fit,minmax(230px,1fr));
-
-
-
-    gap:30px;
+margin-top:70px;
 
 
 }
@@ -876,42 +890,37 @@ a{
 
 
 
-.process-box{
+
+.benefit-card{
 
 
-    background:
-
-    rgba(255,255,255,.04);
+background:
 
 
-
-    padding:35px 25px;
-
-
-
-    border-radius:25px;
+rgba(255,255,255,.05);
 
 
 
-    text-align:center;
+border:
+
+
+1px solid rgba(255,255,255,.08);
 
 
 
-    transition:.4s;
-
-
-}
+border-radius:25px;
 
 
 
+padding:40px 30px;
 
 
-.process-box:hover{
+
+text-align:center;
 
 
-    transform:
 
-    translateY(-10px);
+transition:.4s ease;
 
 
 }
@@ -920,59 +929,23 @@ a{
 
 
 
-
-.process-number{
-
-
-    width:65px;
+.benefit-card:hover{
 
 
-    height:65px;
+transform:
+
+translateY(-10px);
 
 
 
-    margin:0 auto 20px;
+border-color:var(--gold);
 
 
 
-    display:flex;
+box-shadow:
 
 
-
-    justify-content:center;
-
-
-    align-items:center;
-
-
-
-    border-radius:50%;
-
-
-
-    background:
-
-    linear-gradient(
-
-    135deg,
-
-    var(--gold),
-
-    var(--gold-light)
-
-    );
-
-
-
-    color:#000;
-
-
-
-    font-weight:800;
-
-
-
-    font-size:1.4rem;
+0 20px 45px rgba(212,175,55,.18);
 
 
 }
@@ -981,25 +954,16 @@ a{
 
 
 
-.process-box h3{
+.benefit-card i{
 
 
-    margin-bottom:15px;
+font-size:50px;
 
 
-}
+color:var(--gold);
 
 
-
-
-
-.process-box p{
-
-
-    color:var(--gray);
-
-
-    line-height:1.8;
+margin-bottom:20px;
 
 
 }
@@ -1008,146 +972,94 @@ a{
 
 
 
-/* ==========================
-   REVEAL ANIMATION
-========================== */
+.benefit-card h3{
 
 
-.reveal{
+font-size:1.4rem;
 
 
-    opacity:0;
-
-
-    transform:
-
-    translateY(60px);
-
-
-
-    transition:
-
-    1s ease;
+margin-bottom:15px;
 
 
 }
 
 
 
-.reveal.active{
 
 
-    opacity:1;
+.benefit-card p{
 
 
+color:var(--gray);
 
-    transform:
 
-    translateY(0);
+line-height:1.8;
 
 
 }
 
 /* ===================================
-   MENTORSHIP CSS PART 3
-=================================== */
-
-
-/* ==========================
    CTA SECTION
-========================== */
+=================================== */
 
 
 .cta-section{
 
+padding:120px 8%;
 
-    padding:120px 8%;
+background:
 
-
-    text-align:center;
-
-
-
-    background:
-
-
-    linear-gradient(
-
-    135deg,
-
-    #0F172A,
-
-    #111827
-
-    );
+linear-gradient(
+135deg,
+#0F172A,
+#050B16
+);
 
 
+text-align:center;
 
-    position:relative;
+position:relative;
 
-
-    overflow:hidden;
-
+overflow:hidden;
 
 }
+
+
 
 
 
 .cta-section::before{
 
 
-    content:"";
+content:"";
 
 
-    position:absolute;
+position:absolute;
 
 
-
-    width:500px;
-
-
-    height:500px;
+width:500px;
 
 
-
-    background:
-
-
-    radial-gradient(
-
-    rgba(212,175,55,.18),
-
-    transparent 70%
-
-    );
+height:500px;
 
 
 
-    top:-200px;
+background:
 
-
-    left:50%;
-
-
-
-    transform:translateX(-50%);
-
-
-}
+radial-gradient(
+rgba(212,175,55,.18),
+transparent 70%
+);
 
 
 
-.cta-section h2{
+top:-200px;
 
 
-    position:relative;
+left:50%;
 
 
-    font-size:3rem;
-
-
-
-    margin-bottom:20px;
+transform:translateX(-50%);
 
 
 }
@@ -1155,95 +1067,20 @@ a{
 
 
 
-.cta-section p{
+
+.cta-content{
 
 
-    position:relative;
+position:relative;
 
 
-    max-width:750px;
+z-index:2;
 
 
-    margin:auto;
+max-width:850px;
 
 
-
-    color:var(--gray);
-
-
-
-    line-height:1.8;
-
-
-}
-
-
-
-
-.cta-section a{
-
-
-    display:inline-block;
-
-
-    position:relative;
-
-
-
-    margin-top:35px;
-
-
-
-    padding:16px 40px;
-
-
-
-    border-radius:50px;
-
-
-
-    background:
-
-
-    linear-gradient(
-
-    135deg,
-
-    var(--gold),
-
-    var(--gold-light)
-
-    );
-
-
-
-    color:#000;
-
-
-
-    font-weight:700;
-
-
-
-    transition:.4s ease;
-
-
-}
-
-
-
-.cta-section a:hover{
-
-
-    transform:
-
-    translateY(-8px);
-
-
-
-    box-shadow:
-
-    0 20px 40px rgba(212,175,55,.3);
+margin:auto;
 
 
 }
@@ -1252,68 +1089,93 @@ a{
 
 
 
-/* ==========================
+.cta-content h2{
+
+
+font-size:3rem;
+
+
+margin-bottom:25px;
+
+
+}
+
+
+
+
+
+.cta-content p{
+
+
+color:var(--gray);
+
+
+line-height:1.8;
+
+
+font-size:1.1rem;
+
+
+}
+
+
+
+
+
+
+
+/* ===================================
    FOOTER
-========================== */
+=================================== */
 
 
 footer{
 
 
-    background:
+background:#050B16;
 
 
-    linear-gradient(
-
-    135deg,
-
-    #050B16,
-
-    #0F172A
-
-    );
-
-
-
-    padding:80px 8% 30px;
-
+padding:90px 8% 30px;
 
 
 }
+
+
 
 
 
 .footer-container{
 
 
-    display:grid;
+display:grid;
 
 
-    grid-template-columns:
+grid-template-columns:
 
 
-    repeat(auto-fit,minmax(260px,1fr));
+repeat(auto-fit,minmax(250px,1fr));
 
 
-
-    gap:50px;
+gap:50px;
 
 
 }
+
+
 
 
 
 .footer-logo{
 
 
-    width:70px;
+width:80px;
 
 
-
-    margin-bottom:20px;
+margin-bottom:20px;
 
 
 }
+
 
 
 
@@ -1321,11 +1183,10 @@ footer{
 .footer-box h3{
 
 
-    color:var(--gold);
+color:var(--gold);
 
 
-
-    margin-bottom:20px;
+margin-bottom:20px;
 
 
 }
@@ -1333,35 +1194,42 @@ footer{
 
 
 
-.footer-box p,
+
+.footer-box p{
+
+
+color:var(--gray);
+
+
+line-height:1.8;
+
+
+margin-bottom:12px;
+
+
+}
+
+
+
+
+
 .footer-box a{
 
 
-    color:var(--gray);
+display:block;
 
 
-    line-height:1.8;
+color:var(--gray);
 
 
-}
+margin-bottom:12px;
 
 
-
-
-.footer-box a{
-
-
-    display:block;
-
-
-    margin-bottom:12px;
-
-
-
-    transition:.3s;
+transition:.3s;
 
 
 }
+
 
 
 
@@ -1369,12 +1237,10 @@ footer{
 .footer-box a:hover{
 
 
-    color:var(--gold);
+color:var(--gold);
 
 
-    transform:
-
-    translateX(8px);
+transform:translateX(8px);
 
 
 }
@@ -1386,24 +1252,21 @@ footer{
 .copyright{
 
 
-    margin-top:50px;
+text-align:center;
 
 
-    padding-top:25px;
+margin-top:50px;
 
 
-
-    text-align:center;
-
+padding-top:25px;
 
 
-    border-top:
+border-top:
 
-    1px solid rgba(255,255,255,.1);
+1px solid rgba(255,255,255,.1);
 
 
-
-    color:#94A3B8;
+color:#94A3B8;
 
 
 }
@@ -1413,74 +1276,64 @@ footer{
 
 
 
-/* ==========================
+
+/* ===================================
    WHATSAPP FLOAT
-========================== */
+=================================== */
 
 
 .whatsapp-float{
 
 
-    position:fixed;
+position:fixed;
 
 
-    right:30px;
+right:30px;
 
 
-    bottom:30px;
+bottom:30px;
 
 
-
-    width:65px;
-
-
-    height:65px;
+width:65px;
 
 
-
-    display:flex;
-
-
-    justify-content:center;
+height:65px;
 
 
-    align-items:center;
+border-radius:50%;
 
 
-
-    border-radius:50%;
-
+background:#25D366;
 
 
-    background:#25D366;
+display:flex;
 
 
-
-    color:white;
-
+justify-content:center;
 
 
-    font-size:32px;
+align-items:center;
 
 
-
-    z-index:9999;
-
+color:white;
 
 
-    box-shadow:
+font-size:32px;
 
 
-    0 15px 35px rgba(37,211,102,.35);
+z-index:9999;
 
 
+box-shadow:
 
-    animation:
+0 15px 35px rgba(37,211,102,.35);
 
-    pulseWhatsapp 2.5s infinite;
+
+transition:.3s;
 
 
 }
+
 
 
 
@@ -1488,9 +1341,7 @@ footer{
 .whatsapp-float:hover{
 
 
-    transform:
-
-    translateY(-8px);
+transform:translateY(-8px) scale(1.05);
 
 
 }
@@ -1498,34 +1349,78 @@ footer{
 
 
 
-@keyframes pulseWhatsapp{
 
 
-    0%{
 
-        box-shadow:
-
-        0 0 0 0 rgba(37,211,102,.5);
-
-    }
+/* ===================================
+   SCROLL TOP
+=================================== */
 
 
-    70%{
-
-        box-shadow:
-
-        0 0 0 20px rgba(37,211,102,0);
-
-    }
+.scroll-top{
 
 
-    100%{
+position:fixed;
 
-        box-shadow:
 
-        0 0 0 0 rgba(37,211,102,0);
+right:30px;
 
-    }
+
+bottom:110px;
+
+
+width:55px;
+
+
+height:55px;
+
+
+border:none;
+
+
+border-radius:50%;
+
+
+background:
+
+linear-gradient(
+135deg,
+var(--gold),
+var(--gold-light)
+);
+
+
+
+color:#000;
+
+
+font-size:20px;
+
+
+cursor:pointer;
+
+
+display:flex;
+
+
+justify-content:center;
+
+
+align-items:center;
+
+
+opacity:0;
+
+
+visibility:hidden;
+
+
+transition:.35s;
+
+
+z-index:999;
+
+
 
 }
 
@@ -1533,43 +1428,66 @@ footer{
 
 
 
-/* ==========================
-   MOBILE
-========================== */
+.scroll-top.show{
+
+
+opacity:1;
+
+
+visibility:visible;
+
+
+}
+
+
+
+
+
+
+
+/* ===================================
+   MOBILE NAVBAR
+=================================== */
 
 
 @media(max-width:900px){
 
 
+.navbar{
+
+padding:18px 6%;
+
+}
+
+
+
 .nav-links{
 
+position:absolute;
 
-    position:absolute;
+top:80px;
 
+left:0;
 
-    top:80px;
-
-
-    left:0;
-
-
-    width:100%;
+width:100%;
 
 
-
-    background:#0F172A;
-
+background:#0F172A;
 
 
-    flex-direction:column;
+display:none;
 
 
-
-    padding:30px;
-
+flex-direction:column;
 
 
-    display:none;
+align-items:center;
+
+
+gap:25px;
+
+
+padding:35px 0;
 
 
 }
@@ -1578,9 +1496,7 @@ footer{
 
 .nav-links.active{
 
-
-    display:flex;
-
+display:flex;
 
 }
 
@@ -1589,17 +1505,49 @@ footer{
 .menu-toggle{
 
 
-    display:block;
+display:block;
+
+
+cursor:pointer;
+
+
+z-index:2000;
 
 
 }
 
 
 
+.menu-toggle span{
+
+
+display:block;
+
+
+width:30px;
+
+
+height:3px;
+
+
+background:var(--gold);
+
+
+margin:6px 0;
+
+
+border-radius:10px;
+
+
+}
+
+
+
+
 .btn-nav{
 
 
-    display:none;
+display:none;
 
 
 }
@@ -1609,7 +1557,7 @@ footer{
 .mentorship-hero h1{
 
 
-    font-size:2.6rem;
+font-size:2.6rem;
 
 
 }
@@ -1619,185 +1567,131 @@ footer{
 .mentorship-hero p{
 
 
-    font-size:1rem;
+font-size:1rem;
 
 
 }
 
 
 
-.cta-section h2{
+.hero-buttons{
 
 
-    font-size:2.2rem;
+flex-direction:column;
+
+
+align-items:center;
 
 
 }
 
 
+
+.hero-btn,
+.hero-btn-outline{
+
+
+width:100%;
+
+
+max-width:320px;
+
+
+text-align:center;
+
+
 }
 
-/* ===================================
-   SCROLL TO TOP BUTTON
-=================================== */
+
+
+.cta-content h2{
+
+
+font-size:2.2rem;
+
+
+}
+
+
+
+.package-card.featured{
+
+
+transform:none;
+
+
+}
+
+
+
+.package-card.featured:hover{
+
+
+transform:translateY(-10px);
+
+
+}
+
+
+
+.footer-container{
+
+
+text-align:center;
+
+
+}
+
+
+
+.footer-logo{
+
+
+margin:auto auto 20px;
+
+
+}
+
+
+
+.whatsapp-float{
+
+
+width:60px;
+
+
+height:60px;
+
+
+right:20px;
+
+
+bottom:20px;
+
+
+font-size:28px;
+
+
+}
+
+
 
 .scroll-top{
 
-    position:fixed;
 
-    right:30px;
+width:50px;
 
-    bottom:110px;
 
-    width:55px;
+height:50px;
 
-    height:55px;
 
-    border:none;
+right:20px;
 
-    border-radius:50%;
 
-    background:
-    linear-gradient(
-    135deg,
-    #D4AF37,
-    #F7D774
-    );
+bottom:95px;
 
-    color:#000;
-
-    font-size:20px;
-
-    cursor:pointer;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    opacity:0;
-
-    visibility:hidden;
-
-    transform:translateY(20px);
-
-    transition:.35s ease;
-
-    z-index:998;
-
-    box-shadow:
-    0 10px 25px rgba(212,175,55,.30);
 
 }
 
-.scroll-top.show{
-
-    opacity:1;
-
-    visibility:visible;
-
-    transform:translateY(0);
-
-}
-
-.scroll-top:hover{
-
-    transform:
-    translateY(-5px);
-
-    box-shadow:
-    0 15px 35px rgba(212,175,55,.40);
-
-}
-
-@media(max-width:768px){
-
-    /* ===================================
-   CURSOR GLOW
-=================================== */
-
-.cursor-glow{
-
-    position:fixed;
-
-    width:220px;
-
-    height:220px;
-
-    border-radius:50%;
-
-    pointer-events:none;
-
-    z-index:0;
-
-    background:
-    radial-gradient(
-        rgba(212,175,55,.15),
-        transparent 70%
-    );
-
-    transform:
-    translate(-50%,-50%);
-
-    transition:
-    transform .08s linear;
-
-}
-
-
-/* ===================================
-   SCROLL PROGRESS BAR
-=================================== */
-
-#progressBar{
-
-    position:fixed;
-
-    top:0;
-
-    left:0;
-
-    width:0%;
-
-    height:4px;
-
-    background:
-    linear-gradient(
-        90deg,
-        #D4AF37,
-        #F7D774
-    );
-
-    z-index:99999;
-
-    transition:
-    width .15s linear;
-
-}
-
-/* Hide on phones/tablets */
-
-@media(max-width:768px){
-
-.cursor-glow{
-
-    display:none;
-
-}
-
-}
-
-.scroll-top{
-
-    width:50px;
-
-    height:50px;
-
-    right:20px;
-
-    bottom:95px;
-
-}
 
 }
